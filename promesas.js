@@ -16,17 +16,9 @@ import { doTask1, doTask2, doTask3 } from './tasks.mjs';
 }
  */
 function runCode() {
-    const strings = [];
-    return doTask1()
-      .then(function(rta1){
-        strings.push(rta1);
-        return doTask2()})
-      .then(function(rta2){
-        strings.push(rta2)
-        return doTask3()})
-      .then(function(rta3){
-        strings.push(rta3)
-        return strings})
+    return Promise.all([doTask1(),doTask2(),doTask3()])
+      .then((values)=>{return values})
+      .catch ((error)=>{console.log(error)})
 }
 
 
