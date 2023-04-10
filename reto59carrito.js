@@ -12,7 +12,8 @@ deleteProduct(product) este método recibirá un producto y lo eliminará de la 
 calculateTotal() este método calculará el total de los productos agregados y lo devolverá.
 getProducts() este método devolerá el array de los productos que contiene el carrito.
 */
-import { Product } from "./product";
+//import { Product } from "./product";
+import Product from 'd:/reto/retojs/product'
 
  class Article {
   // Tu código aquí 👈
